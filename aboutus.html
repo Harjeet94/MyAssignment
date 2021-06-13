@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/jet.css">
+    </head>
+<body onload="onAboutusLoaded()">
+    <h1>Transflower</h1>
+    <a href="index.html"> Home</a> |
+    <a href="aboutus.html"> About us</a> |
+    <a href="contact.html"> Contact us</a> |
+    <a href="login.html"> Sign In</a> |
+    <a href="register.html"> Register</a> |
+    <hr/>
+    <h1>Doing ordinary things extraordinarily</h1>
+    <p>Mentoring services</p>
+    <p>Microsoft Certified Trainer</p>
+    <p>Project based Learing....</p>
+
+    <p id="pResult"></p>
+
+    <script>
+
+        function onAboutusLoaded(){
+            if( typeof(Storage) !== "undefined"){
+                var personFromLocalStorage=localStorage.getItem("thePerson");
+                let pResult=document.getElementById("pResult");
+                strPersonFromLocalStorage=JSON.parse(personFromLocalStorage);
+                console.log(strPersonFromLocalStorage.email);
+            }
+            else{
+                 console.log("Sorry, your browser does not support  Web Storage");
+            }
+        }
+    </script>
+</body>
+
+
+</html>
